@@ -1,0 +1,65 @@
+Create a similar looking website shown in the image
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homepage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .header {
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+    }
+    .header button {
+      margin-left: 10px;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .content h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .content button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #3498db;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .image {
+      margin-top: 40px;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <button>Login</button>
+      <button>Sign Up</button>
+    </div>
+    <div class="content">
+      <h1>Welcome to Our Website!</h1>
+      <button>Start Learning</button>
+    </div>
+    <img class="image" src="C:\Users\abu\Desktop\image.jpg" alt="Homepage Image">
+  </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+Create a form with basic validation (name, email, phone number, password, age, gender, date, color picker)
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Creating form with Basic Validation</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+  <script>
+    function validateForm() {
+      var name = document.forms["myForm"]["name"].value;
+      var email = document.forms["myForm"]["email"].value;
+      var phone = document.forms["myForm"]["phone"].value;
+      var password = document.forms["myForm"]["password"].value;
+      var age = document.forms["myForm"]["age"].value;
+      var gender = document.forms["myForm"]["gender"].value;
+      var date = document.forms["myForm"]["date"].value;
+      var color = document.forms["myForm"]["color"].value;
+      
+      if (name == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+      
+      if (email == "") {
+        alert("Email must be filled out");
+        return false;
+      }
+      
+      // Email validation regex
+      var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if (!email.match(emailRegex)) {
+        alert("Invalid email format");
+        return false;
+      }
+      
+      // Phone number validation regex
+      var phoneRegex = /^\d{10}$/;
+      if (!phone.match(phoneRegex)) {
+        alert("Invalid phone number");
+        return false;
+      }
+      
+      if (password == "") {
+        alert("Password must be filled out");
+        return false;
+      }
+      
+      if (age == "") {
+        alert("Age must be filled out");
+        return false;
+      }
+      
+      if (gender == "") {
+        alert("Gender must be selected");
+        return false;
+      }
+      
+      if (date == "") {
+        alert("Date must be selected");
+        return false;
+      }
+      
+      if (color == "") {
+        alert("Color must be selected");
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Form with Basic Validation</h1>
+  
+  <form name="myForm" onsubmit="return validateForm()" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required><br><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required><br><br>
+    
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="">Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select><br><br>
+    
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br><br>
+    
+    <label for="color">Favorite Color:</label>
+    <input type="color" id="color" name="color" required><br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

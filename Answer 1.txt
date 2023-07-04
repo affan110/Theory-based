@@ -1,0 +1,62 @@
+Explain all the CSS positions(static, fixed, sticky, relative, absolute) with one code example each
+    
+Static Position:
+The default position value for all elements.
+Elements with a static position are positioned according to the normal flow of the document.
+The top, right, bottom, left, and z-index properties have no effect on statically positioned elements.
+Example:
+ .box {
+  position: static;
+}
+
+
+Fixed Position:
+An element with a fixed position is positioned relative to the viewport (the browser window).
+It does not move when the page is scrolled.
+Fixed elements are commonly used for headers or navigation bars that should remain visible at all times.
+Example:
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+
+Sticky Position:
+An element with a sticky position is positioned based on the user's scroll position.
+It behaves like a relatively positioned element until a specified threshold is met, and then it becomes fixed.
+It remains in the document flow until the threshold is reached, and then it "sticks" to its position.
+Example:
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+}
+
+
+Relative Position:
+An element with a relative position is positioned relative to its normal position.
+It retains its position in the normal flow of the document, and nearby elements are not affected.
+The offset properties (top, right, bottom, left) can be used to move the element from its original position.
+Example:
+.image {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+
+
+Absolute Position:
+An element with an absolute position is positioned relative to its nearest positioned ancestor (parent) element.
+If no positioned ancestor is found, it is positioned relative to the initial containing block (usually the document body).
+Absolute positioned elements are removed from the normal document flow and may overlap other elements.
+Example:
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+}
